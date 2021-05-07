@@ -2,11 +2,13 @@ syntax = "proto3";
 package fadeev.testchain.testchain;
 
 // this line is used by starport scaffolding # genesis/proto/import
+import "testchain/post.proto";
 
 option go_package = "github.com/fadeev/testchain/x/testchain/types";
 
 // GenesisState defines the testchain module's genesis state.
 message GenesisState {
     // this line is used by starport scaffolding # genesis/proto/state
+		repeated Post postList = 1; // this line is used by starport scaffolding # genesis/proto/stateField
     // this line is used by starport scaffolding # ibc/genesis/proto
 }
